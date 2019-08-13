@@ -13,17 +13,82 @@ h1 {
     font-size: 80px;
     font-weight: 600;
     color: #192b59;
+    max-width: 540px;
+    line-height: 1.1;
+    letter-spacing: -2.4px;
+    margin-bottom: 65px;
+}
 
+.title-h2 {
+    font-size: 50px;
+    color: #192b59;
+    font-weight: 600;
+    line-height: 1.2;
+    letter-spacing: -1.5px;
+}
+
+.title-h2 span {
+    font-size: 16px;
+    color: #1085e4;
+    display: block;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 14px;
+}
+
+.title-40 {
+    font-size: 40px;
+    color: #192b59;
+    font-weight: 600;
+    line-height: 1.2;
+    letter-spacing: -1.1px;
+}
+
+.title-40 span {
+    color: #1085e4;
+    display: block;
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: 18px;
+    margin-bottom: 20px;
+    letter-spacing: 3.5px;
+}
+
+.page-stat .title-h2, .page-screen .title-h2 {
+    text-align: center;
+    margin: 0 auto;
+}
+
+.page-stat .title-h2 {
+    max-width: 500px;
+}
+
+.page-plan .title-40 {
+    margin-bottom: 80px;
+}
+
+.wrap {
+    max-width: 1110px;
+    margin: 0 auto;
 }
 
 .nav {
+    display: flex;
     font-size: 12px;
-    color: #6e7ea9;
     text-transform: uppercase;
     font-weight: 700;
     list-style-type: none;
     margin: 0;
     padding: 0;
+}
+
+.nav>li {
+    padding: 0 15px;
+}
+
+.nav-item {
+    color: #6e7ea9;
 }
 
 .btn-primary {
@@ -72,9 +137,16 @@ h1 {
     font-size: 12px;
     font-weight: 700;
     letter-spacing: 2.5px;
-    padding: 20px 40px;
+    padding: 16px 62px;
     border-radius: 30px;
     text-transform: uppercase;
+    box-sizing: border-box;
+    display: inline-block;
+}
+
+.btn-active {
+    padding: 16px 62px; 
+    display: inline-block;
 }
 
 .btn-group a + a {
@@ -121,12 +193,6 @@ h1 {
     text-transform: uppercase;
 }
 
-.page-software h2 {
-    font-size: 50px;
-    color: #192b59;
-    font-weight: 600;
-}
-
 .page-software dl dt {
     color: #5a6789;
     font-weight: 700;
@@ -136,61 +202,141 @@ h1 {
     font-size: 14px;
 }
 
-.page-stat h2 {
-    font-size: 50px;
-    color: #192b59;
-    font-weight: 600;
+.list-stat {
+    display: flex;
+    justify-content: space-around; 
+    list-style-type: none;
+    margin-top: 76px;
 }
 
-.page-stat h2 span {
-    font-size: 16px;
-    color: #1085e4;
-    display: block;
-    font-weight: 800;
-    text-transform: uppercase;
-}
-
-.page-stat ul li {
+.list-stat>li {
     color: #1085e4;
     text-transform: uppercase;
     font-size: 12px;
     font-weight: 700;
+    text-align: center;
+    letter-spacing: 2.4px;
 }
 
-.page-stat ul li span {
-    font-weight: 700;
+.list-stat>li>span {
+    display: block;
     font-size: 60px;
     color: #bacbdc;
+    margin-bottom: 20px;
+    letter-spacing: 0;
 }
 
-.page-app h2 {
-    font-size: 50px;
-    color: #192b59;
-    font-weight: 600;
+.screen {
+    margin-top: 36px;
+    margin-bottom: -7px;
 }
 
-.page-analytics h2 {
-    font-size: 50px;
-    color: #192b59;
-    font-weight: 600;
+.box-price {
+    display: flex;
+    justify-content: space-between;
 }
 
-.page-control h2 {
-    font-size: 50px;
-    color: #192b59;
-    font-weight: 600;
+.box-price-item {
+    width: 100%;
+    max-width: 350px;
+    background-color: #f5faff;
+    padding: 67px 0 79px;
+    position: relative;
 }
 
-.page-screen h2 {
-    font-size: 40px;
-    color: #192b59;
-    font-weight: 600;
-}
-
-.page-screen h2 span {
-    font-size: 18px;
-    color: #1085e4;
+.box-price-item::after {
     display: block;
-    font-weight: 800;
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-top: 631px solid #edf4fb;
+    border-left: 60px solid transparent;
+}
+
+.box-price-item.active::after {
+    display: none;
+}
+
+.box-price-item h3 {
+    color: #000958;
+    font-size: 70px;
+    line-height: 1;
+    letter-spacing: -2px;
+    margin: 0;
+    margin-bottom: 14px;
+}
+
+.box-price-item.active h3 {
+    color: #fff;
+}
+
+.box-price-item span {
+    font-size: 20px;
+}
+
+.box-price-item p {
+    color: #0084ff;
+    font-size: 14px;
+    letter-spacing: 2.8px;
     text-transform: uppercase;
+    margin: 0;
+    margin-bottom: 36px;
+}
+
+.box-price-item.active p {
+    color: #fff;
+}
+
+.box-price-item>ul {
+    margin-bottom: 45px;
+    font-size: 14px;
+}
+
+.box-price-item>ul>li {
+    margin-bottom: 14px;
+}
+
+.box-price-item>ul>li:last-child {
+    margin-bottom: 0;
+}
+
+.box-price-item.active {
+    background-color: #192b59;
+    color: #fff;
+}
+
+.box-price-item.active span:last-child {
+    color: #7b8ab2;
+}
+
+.box-price-item:last-child span:last-child {
+    color: #7b8ab2;
+}
+
+.box-price-item ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+/* Page */
+
+.page-stat, .page-screen {
+    background-color: #edf6ff;
+}
+
+.page-stat {
+    padding: 116px 0 96px;
+}
+
+.page-screen, .page-plan {
+    text-align: center;
+}
+
+.page-screen {
+    padding-top: 116px;
+}
+
+.page-plan {
+    padding: 169px 0 120px;
 }
