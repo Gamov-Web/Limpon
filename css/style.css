@@ -55,6 +55,18 @@ h1 {
     letter-spacing: 3.5px;
 }
 
+.page-subscribe .title-h2 {
+    color: #fff;
+    margin: 0;
+    margin-bottom: 27px;
+}
+
+.page-subscribe .title-h2 span {
+    color: #00bffe;
+    font-size: 14px;
+    margin-bottom: 19px;
+}
+
 .page-stat .title-h2, .page-screen .title-h2 {
     text-align: center;
     margin: 0 auto;
@@ -73,6 +85,20 @@ h1 {
     margin: 0 auto;
 }
 
+.box-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 305px;
+}
+
+.logo {
+    display: block;
+    width: 181px;
+    height: 49px; 
+    background-image: url(../img/header/logo.png);
+}
+
 .nav {
     display: flex;
     font-size: 12px;
@@ -84,11 +110,22 @@ h1 {
 }
 
 .nav>li {
-    padding: 0 15px;
+    padding: 0 20px;
+    letter-spacing: 2px;
 }
 
 .nav-item {
     color: #6e7ea9;
+}
+
+.screen-img {
+    display: block;
+    width: 895px;
+    height: 740px;
+    background: url(../img/header/header-img.png) no-repeat;
+    position: absolute;
+    top: 189px;
+    right: 0;
 }
 
 .btn-primary {
@@ -105,7 +142,7 @@ h1 {
 
 .btn-primary:hover {
     color: #1085e4;
-    background-color: #fff;
+    background-color: transparent;
 }
 
 .btn-secondary {
@@ -144,13 +181,63 @@ h1 {
     display: inline-block;
 }
 
+.btn-info:hover {
+    background-color: #94b4cc;
+    border: 1px solid #94b4cc;
+    color: #fff;
+}
+
 .btn-active {
     padding: 16px 62px; 
     display: inline-block;
 }
 
+.btn-subscribe {
+    padding: 17px 43px;
+    letter-spacing: 4px;
+}
+
 .btn-group a + a {
     margin-left: 15px;
+}
+
+.list-company {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    max-width: 1110px;
+    margin: 0 auto;
+}
+
+.list-company-item {
+    display: block;
+}
+
+.company-one {
+    flex-basis: 198px;
+    height: 58px;
+    background-image: url(../img/sponsors/token.png);
+}
+
+.company-two {
+    flex-basis: 200px;
+    height: 69px;
+    background-image: url(../img/sponsors/magneto.png);
+}
+
+.company-three {
+    flex-basis: 201px;
+    height: 47px;
+    background-image: url(../img/sponsors/boohoo.png);
+}
+
+.company-four {
+    flex-basis: 200px;
+    height: 69px;
+    background-image: url(../img/sponsors/fractal.png);
 }
 
 .grid h2 {
@@ -179,18 +266,53 @@ h1 {
     font-weight: 600;
 }
 
-.page-subscribe h2 {
-    font-size: 50px;
-    color: #fff;
-    font-weight: 600;
+.box-page-subscribe {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.page-subscribe h2 span {
-    font-size: 14px;
-    color: #00bffe;
+.subscribe-info {
+    flex-basis: 48.7%;
+}
+
+.page-subscribe p {
+    max-width: 406px;
+    font-size: 18px;
+    line-height: 1.5;
+    color: #dfe8ff;
+    margin: 0;
+    margin-bottom: 40px;
+}
+
+.form-email {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 8px 8px 39px;
+    border: 2px solid #405eb2;
+    border-radius: 35px;
+}
+
+.page-subscribe input {
     display: block;
-    font-weight: 800;
-    text-transform: uppercase;
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    color: #b1c3ee;
+}
+
+.page-subscribe input:focus {
+    outline: none;
+}
+
+.page-subscribe input::placeholder{
+    color: #b1c3ee;
+    font-size: 14px;
+}
+
+.form-email button {
+    cursor: pointer;
 }
 
 .page-software dl dt {
@@ -237,20 +359,18 @@ h1 {
 }
 
 .box-price-item {
-    width: 100%;
-    max-width: 350px;
+    flex-basis: 31.5%;
     background-color: #f5faff;
     padding: 67px 0 79px;
     position: relative;
 }
 
 .box-price-item::after {
-    display: block;
     content: '';
     position: absolute;
     top: 0;
     right: 0;
-    border-top: 631px solid #edf4fb;
+    border-top: 623px solid #edf4fb;
     border-left: 60px solid transparent;
 }
 
@@ -320,6 +440,29 @@ h1 {
 }
 
 /* Page */
+
+.page-header {
+    padding: 53px 0 330px; 
+    background: url(../img/header/header-bg.png) no-repeat center / cover;
+    position: relative;
+}
+
+.page-company {
+    padding: 106px 0 99px;
+    background: #1085e4 url(../img/sponsors/sponsors-bg.png) no-repeat center / cover;
+}
+
+.page-subscribe {
+    padding: 52px 0;
+    background: rgba(10,32,144,1);
+    background: -moz-linear-gradient(-45deg, rgba(10,32,144,1) 0%, rgba(35,120,205,1) 100%);
+    background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(10,32,144,1)), color-stop(100%, rgba(35,120,205,1)));
+    background: -webkit-linear-gradient(-45deg, rgba(10,32,144,1) 0%, rgba(35,120,205,1) 100%);
+    background: -o-linear-gradient(-45deg, rgba(10,32,144,1) 0%, rgba(35,120,205,1) 100%);
+    background: -ms-linear-gradient(-45deg, rgba(10,32,144,1) 0%, rgba(35,120,205,1) 100%);
+    background: linear-gradient(135deg, rgba(10,32,144,1) 0%, rgba(35,120,205,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0a2090', endColorstr='#2378cd', GradientType=1 );
+}
 
 .page-stat, .page-screen {
     background-color: #edf6ff;
