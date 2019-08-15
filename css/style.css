@@ -240,6 +240,64 @@ h1 {
     background-image: url(../img/sponsors/fractal.png);
 }
 
+.grid {
+    display: grid;
+    grid-template-areas: "a b c" "d b c" "d f g" "e f g" "e h h";
+    max-width: 1110px;
+    margin: 0 auto;
+    grid-gap: 30px;
+}
+
+.grid-title {
+    grid-area: a;
+    margin: 0;
+    margin-bottom: 30px;
+}
+
+.grid-item-1 {
+    grid-area: b;
+}
+
+.grid-item-2 {
+    grid-area: c;
+}
+
+.grid-item-3 {
+    grid-area: d;
+}
+
+.grid-item-4 {
+    grid-area: e;
+}
+
+.grid-item-5 {
+    grid-area: f;
+}
+
+.grid-item-6 {
+    grid-area: g;
+}
+
+.grid-text {
+    grid-area: h;
+}
+
+.grid-text p {
+    margin-top: 0;
+}
+
+.grid-text p:last-child {
+    color: #1085e4;
+    font-size: 14px;
+    margin: 0;
+}
+
+.grid-text span {
+    color: #192b59;
+    font-size: 16px;
+    font-weight: 700;
+}
+
 .grid h2 {
     font-size: 40px;
     color: #192b59;
@@ -254,16 +312,66 @@ h1 {
     text-transform: uppercase;
 }
 
+.grid-item {
+    text-align: center;
+    box-shadow: 0 8px 16px rgba(180, 181, 181, .2);
+    padding: 40px 40px 69px;
+    border-radius: 10px;
+}
+
 .grid-item h3 {
     font-size: 20px;
     font-weight: 600;
     color: #192b59;
+    margin-bottom: 18px;
 }
 
 .grid-item a {
     font-size: 14px;
     color: #1085e4;
     font-weight: 600;
+}
+
+.grid-icon {
+    display: block;
+    background-repeat: no-repeat;
+    margin: 0 auto 36px;
+}
+
+.grid-icon-1 {
+    background-image: url(../img/features/features-2.png);
+    width: 73px;
+    height: 79px;
+}
+
+.grid-icon-2 {
+    background-image: url(../img/features/features-3.png);
+    width: 89px;
+    height: 85px;
+}
+
+.grid-icon-3 {
+    background-image: url(../img/features/features-1.png);
+    width: 79px;
+    height: 82px;
+}
+
+.grid-icon-4 {
+    background-image: url(../img/features/features-4.png);
+    width: 109px;
+    height: 92px;
+}
+
+.grid-icon-5 {
+    background-image: url(../img/features/features-5.png);
+    width: 85px;
+    height: 90px;
+}
+
+.grid-icon-6 {
+    background-image: url(../img/features/features-6.png);
+    width: 100px;
+    height: 87px;
 }
 
 .box-page-subscribe {
@@ -286,33 +394,33 @@ h1 {
 }
 
 .form-email {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 8px 8px 8px 39px;
-    border: 2px solid #405eb2;
-    border-radius: 35px;
+    position: relative;
 }
 
 .page-subscribe input {
-    display: block;
     width: 100%;
     background-color: transparent;
-    border: none;
     color: #b1c3ee;
-}
-
-.page-subscribe input:focus {
+    padding: 22px 210px 25px 39px;
+    border: 2px solid #405eb2;
+    border-radius: 35px;
     outline: none;
+    box-sizing: border-box;
+    line-height: 1.2;
 }
 
-.page-subscribe input::placeholder{
-    color: #b1c3ee;
-    font-size: 14px;
-}
+.page-subscribe input::-webkit-input-placeholder {color: #b1c3ee; font-size: 14px;}
+.page-subscribe input::-webkit-input-placeholder {color: #b1c3ee; font-size: 14px;}
+.page-subscribe input::-moz-placeholder          {color: #b1c3ee; font-size: 14px;}
+.page-subscribe input:-moz-placeholder           {color: #b1c3ee; font-size: 14px;}
+.page-subscribe input:-ms-input-placeholder      {color: #b1c3ee; font-size: 14px;}
 
 .form-email button {
+    position: absolute;
+    top: 10px;
+    right: 11px;
     cursor: pointer;
+    outline: none;
 }
 
 .page-software dl dt {
@@ -450,6 +558,10 @@ h1 {
 .page-company {
     padding: 106px 0 99px;
     background: #1085e4 url(../img/sponsors/sponsors-bg.png) no-repeat center / cover;
+}
+
+.page-grid {
+    padding: 122px 0;
 }
 
 .page-subscribe {
