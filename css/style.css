@@ -67,6 +67,12 @@ h1 {
     margin-bottom: 19px;
 }
 
+.page-software .title-h2 {
+    max-width: 564px;
+    margin: 30px 0 26px;
+    letter-spacing: -1px;
+}
+
 .page-stat .title-h2, .page-screen .title-h2 {
     text-align: center;
     margin: 0 auto;
@@ -138,6 +144,7 @@ h1 {
     padding: 20px 40px;
     letter-spacing: 2.5px;
     border-radius: 30px;
+    transition: .3s linear;
 }
 
 .btn-primary:hover {
@@ -155,6 +162,7 @@ h1 {
     letter-spacing: 2.5px;
     padding: 20px 40px;
     border-radius: 30px;
+    transition: .3s linear;
 }
 
 .btn-secondary:hover {
@@ -179,6 +187,7 @@ h1 {
     text-transform: uppercase;
     box-sizing: border-box;
     display: inline-block;
+    transition: .3s linear;
 }
 
 .btn-info:hover {
@@ -243,9 +252,10 @@ h1 {
 .grid {
     display: grid;
     grid-template-areas: "a b c" "d b c" "d f g" "e f g" "e h h";
+    grid-template-columns: 1fr 1fr 1fr;
     max-width: 1110px;
     margin: 0 auto;
-    grid-gap: 30px;
+    grid-gap: 35px;
 }
 
 .grid-title {
@@ -333,45 +343,31 @@ h1 {
 }
 
 .grid-icon {
-    display: block;
-    background-repeat: no-repeat;
-    margin: 0 auto 36px;
-}
-
-.grid-icon-1 {
-    background-image: url(../img/features/features-2.png);
-    width: 73px;
-    height: 79px;
-}
-
-.grid-icon-2 {
-    background-image: url(../img/features/features-3.png);
-    width: 89px;
-    height: 85px;
-}
-
-.grid-icon-3 {
-    background-image: url(../img/features/features-1.png);
-    width: 79px;
-    height: 82px;
-}
-
-.grid-icon-4 {
-    background-image: url(../img/features/features-4.png);
-    width: 109px;
     height: 92px;
 }
 
+.grid-icon-1 {
+    background: url(../img/features/features-2.png) no-repeat center / 73px 79px;
+}
+
+.grid-icon-2 {
+    background: url(../img/features/features-3.png) no-repeat center / 89px 85px;
+}
+
+.grid-icon-3 {
+    background: url(../img/features/features-1.png) no-repeat center / 79px 82px;
+}
+
+.grid-icon-4 {
+    background: url(../img/features/features-4.png) no-repeat center / 109px 92px;
+}
+
 .grid-icon-5 {
-    background-image: url(../img/features/features-5.png);
-    width: 85px;
-    height: 90px;
+    background: url(../img/features/features-5.png) no-repeat center / 85px 90px;
 }
 
 .grid-icon-6 {
-    background-image: url(../img/features/features-6.png);
-    width: 100px;
-    height: 87px;
+    background: url(../img/features/features-6.png) no-repeat center / 100px 87px;
 }
 
 .box-page-subscribe {
@@ -423,13 +419,69 @@ h1 {
     outline: none;
 }
 
-.page-software dl dt {
-    color: #5a6789;
-    font-weight: 700;
+.page-software-flex {
+    display: flex;
+    justify-content: flex-end;
 }
 
-.page-software dd {
+.page-software-flex>div {
+    flex-basis: 54%;
+}
+
+.page-software-icon {
+    width: 60px;
+    height: 60px;
+    box-shadow: 0 8px 16px rgba(16, 133, 228, .4);
+    border-radius: 6px;
+    background: #1085e4 url(../img/button/button-icon.png) no-repeat center;
+    position: relative;
+}
+
+.page-software-icon::after {
+    content: '';
+    position: absolute;
+    background: url(../img/button/element.png) no-repeat center;
+    width: 20px;
+    height: 20px;
+    top: -15px;
+    right: -29px;
+}
+
+.page-software-list {
+    margin: 0;
+    margin-top: 30px;
+    padding-right: 47px;
+    height: 323px;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+
+.page-software-list::-webkit-scrollbar-thumb {
+    background-color: #1085e4;
+    border-radius: 2px;
+}
+
+.page-software-list::-webkit-scrollbar {
+    background-color: #f3f6ff;
+    border-radius: 2px;
+    width: 4px;
+}
+
+.page-software-list dt {
+    color: #5a6789;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.page-software-list dd {
     font-size: 14px;
+    line-height: 1.8;
+    margin-left: 0;
+    margin-bottom: 50px;
+}
+
+.page-software-list dd:last-child {
+    margin-bottom: 0;
 }
 
 .list-stat {
@@ -574,6 +626,11 @@ h1 {
     background: -ms-linear-gradient(-45deg, rgba(10,32,144,1) 0%, rgba(35,120,205,1) 100%);
     background: linear-gradient(135deg, rgba(10,32,144,1) 0%, rgba(35,120,205,1) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0a2090', endColorstr='#2378cd', GradientType=1 );
+}
+
+.page-software {
+    background: url(../img/features-2/features2-img.png) no-repeat left 81%, url(../img/features-2/features2-bg.png) no-repeat left -10%;
+    padding: 128px 0 183px;
 }
 
 .page-stat, .page-screen {
